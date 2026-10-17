@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3efe6;
+  --foreground: #172026;
+  --navy: #1f4e79;
+  --navy-dark: #14365a;
+  --gold: #c4a35a;
+  --paper: #fffdf8;
+  --ink-muted: #5c6770;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: #1f4e79;
+  --color-navy-dark: #14365a;
+  --color-gold: #c4a35a;
+  --color-paper: #fffdf8;
+  --color-ink-muted: #5c6770;
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-source-serif);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #c4a35a55;
+}
+
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
